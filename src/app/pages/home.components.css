@@ -1,0 +1,7 @@
+.hero {
+  background: var(--hero-bg-image) center / cover no-repeat;
+}
+
+.card {
+  backdrop-filter: none;
+}
