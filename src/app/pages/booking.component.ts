@@ -145,7 +145,6 @@ export class BookingComponent implements OnInit {
 
   private processVagons(allVagons: Vagon[], departure: any) {
     const trainId = departure?.id || departure?.trainId;
-    // Filter wagons that belong to this train
     const trainVagons = allVagons.filter(v =>
       String(v.trainId) === String(trainId) || (v.trainNumber && String(v.trainNumber) === String(departure?.number))
     );
@@ -168,7 +167,7 @@ export class BookingComponent implements OnInit {
       }
     }
 
-    // Fallback: If no wagons found for this train, try existing logic if any data exists
+
     if (departure?.vagons && Array.isArray(departure.vagons) && departure.vagons.length) {
       const firstVagonId = departure.vagons?.id || departure.vagons?._id || departure.vagons;
       if (typeof firstVagonId === 'string' || typeof firstVagonId === 'number') {
@@ -202,7 +201,7 @@ export class BookingComponent implements OnInit {
   }
 
   onContinue() {
-    // Validate forms and seat assignment
+    
     if (this.form.invalid) {
       this.bookingError = 'Please complete passenger details correctly.';
       this.form.markAllAsTouched();
@@ -261,7 +260,6 @@ export class BookingComponent implements OnInit {
           this.store.addTicket({ ticketId, passengers: people, status: 'registered', date: dateIso });
           this.router.navigate(['/payment', ticketId]);
         } else {
-          // fallback: show the tickets history page
           this.router.navigate(['/status']);
         }
       },

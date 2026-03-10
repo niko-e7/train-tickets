@@ -131,7 +131,7 @@ export class SearchFormComponent implements OnInit {
       return;
     }
 
-    // Only include non-empty values in the query params
+    
     const queryParams: Record<string, string> = {};
     if (from) queryParams['from'] = from;
     if (to) queryParams['to'] = to;

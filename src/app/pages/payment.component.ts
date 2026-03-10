@@ -129,7 +129,7 @@ import { ActivatedRoute, Router } from '@angular/router';
       z-index: 1;
     }
 
-    /* Input Styles on Card */
+  
     input {
       background: transparent;
       border: none;
@@ -149,7 +149,7 @@ import { ActivatedRoute, Router } from '@angular/router';
       color: rgba(255, 255, 255, 0.3);
     }
 
-    /* Card Front Layout */
+   
     .heading_8264 { position: absolute; top: 2rem; right: 2.5rem; letter-spacing: .3em; font-size: 0.8em; margin: 0; opacity: 0.8; }
     .logo { position: absolute; bottom: 2.5rem; right: 2.5rem; }
     .chip { position: absolute; top: 2.5rem; left: 3rem; }
@@ -195,7 +195,7 @@ import { ActivatedRoute, Router } from '@angular/router';
       letter-spacing: 1px;
     }
 
-    /* Card Back Layout */
+    
     .strip { position: absolute; top: 3.5rem; width: 100%; height: 60px; background: repeating-linear-gradient(45deg, #222, #222 10px, #111 10px, #111 20px); }
     .mstrip { position: absolute; top: 9rem; left: 2.5rem; width: 65%; height: 45px; background: rgba(255,255,255,0.9); border-radius: 6px; }
     .sstrip { position: absolute; top: 9rem; right: 2.5rem; width: 20%; height: 45px; background: white; border-radius: 6px; display: flex; align-items: center; justify-content: center; z-index: 10; }
@@ -209,7 +209,7 @@ import { ActivatedRoute, Router } from '@angular/router';
       letter-spacing: 3px;
     }
 
-    /* Actions */
+   
     .actions {
       display: flex;
       gap: 1.5rem;
@@ -219,7 +219,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 
     .name-input {
-  bottom: 20px; /* Or any other suitable value */
+  bottom: 20px;
 }
     button {
       padding: 1rem 2.5rem;

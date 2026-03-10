@@ -67,7 +67,7 @@ export class DeparturesComponent implements OnInit, OnDestroy {
   filtered: TrainView[] = [];
   filterActive = false;
   errorMessage = '';
-  loading = true;  // start true so there's no flicker of empty state
+  loading = true; 
 
   private dataSub: Subscription | null = null;
   private routeSub: Subscription | null = null;
@@ -84,10 +84,10 @@ export class DeparturesComponent implements OnInit, OnDestroy {
     this.loading = true;
     this.errorMessage = '';
 
-    // Fetch once — no query params sent to the API
+
     this.dataSub = this.api.getDepartures().subscribe({
       next: (groups: DepartureGroup[]) => {
-        // Flatten departures[] → trains[]
+   
         this.allTrains = groups.flatMap(dep =>
           (dep.trains ?? []).map(t => ({
             id: t.id,
@@ -99,11 +99,11 @@ export class DeparturesComponent implements OnInit, OnDestroy {
             departure: t.departure,
             arrive: t.arrive,
             departureId: dep.id,
-            vagons: t.vagons      // preserve seat data
+            vagons: t.vagons      
           } as TrainView))
         );
 
-        // Apply any query-param filter that was present when page loaded
+      
         this.applyQueryFilter(this.route.snapshot.queryParams);
 
         this.loading = false;
@@ -117,7 +117,7 @@ export class DeparturesComponent implements OnInit, OnDestroy {
       }
     });
 
-    // Re-filter whenever query params change after data is loaded
+
     this.routeSub = this.route.queryParams.subscribe(q => {
       if (!this.loading && this.allTrains.length > 0) {
         this.applyQueryFilter(q);

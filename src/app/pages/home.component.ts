@@ -26,7 +26,7 @@ import { ApiService } from '../services/api.service';
     `
       :host {
         display: block;
-        /* Negate the .container margin and padding from app.css */
+   
         margin: -1.5rem -1rem;
       }
       .hero {
@@ -95,7 +95,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     private router: Router,
   ) { }
   ngOnInit(): void {
-    // Lock body scroll for the home page specifically to force one window
+   
     document.body.style.overflow = 'hidden';
     this.api.getStations().subscribe({
       next: (s) => (this.stations = s || []),
@@ -103,7 +103,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
   }
   ngOnDestroy(): void {
-    // Restore scroll when leaving the home page
+   
     document.body.style.overflow = '';
   }
 }

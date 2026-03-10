@@ -90,7 +90,7 @@ export class BookingStoreService {
   }
 
   addTicket(ticket: any): void {
-    // Avoid duplicates
+    
     const id = ticket?.ticketId || ticket?.id;
     if (this.tickets.find(t => (t.ticketId || t.id) === id)) return;
 

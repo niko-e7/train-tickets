@@ -26,7 +26,7 @@ export interface Train {
   vagons?: Vagon[];
 }
 
-/** Shape of each object returned by GET /api/departures */
+
 export interface DepartureGroup {
   id: number;
   source: string;
@@ -35,7 +35,7 @@ export interface DepartureGroup {
   trains: TrainRaw[];
 }
 
-/** Raw train as nested inside DepartureGroup */
+
 export interface TrainRaw {
   id: number;
   number: number;
@@ -44,12 +44,11 @@ export interface TrainRaw {
   from: string;
   to: string;
   departure: string;
-  arrive: string;   // API spells it "arrive", not "arrival"
+  arrive: string;   
   departureId: number;
   vagons: any;
 }
 
-/** Flat view model used in the UI */
 export interface TrainView {
   id: number;
   number: number;
@@ -58,9 +57,9 @@ export interface TrainView {
   to: string;
   date: string;
   departure: string;
-  arrive: string;   // kept consistent with API field name
+  arrive: string;   
   departureId: number;
-  vagons?: any;     // raw vagon/seat data preserved from API
+  vagons?: any;     
 }
 
 export interface DepartureResponse {

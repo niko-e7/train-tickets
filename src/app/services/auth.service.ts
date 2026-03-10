@@ -33,7 +33,7 @@ export class AuthService {
     const firstName = parts[0] || 'User';
     const lastName = parts.slice(1).join(' ') || 'Name';
 
-    // Exact schema matching SignUpDto
+  
     const body = {
       firstName: firstName.substring(0, 20).padEnd(2, 'a'),
       lastName: lastName.substring(0, 20).padEnd(2, 'a'),

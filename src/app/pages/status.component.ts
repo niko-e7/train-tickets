@@ -106,7 +106,7 @@ export class StatusComponent implements OnInit {
       next: s => {
         this.status = s;
         this.loading = false;
-        // Optionally update history if it was a new ID
+       
         this.store.addTicket(s);
         this.history = this.store.getTickets();
       },

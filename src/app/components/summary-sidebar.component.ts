@@ -83,7 +83,7 @@ import { CommonModule } from '@angular/common';
       width: 100%;
     }
 
-    /* Receipt Styles */
+    
     .receipt {
       width: 100%;
       max-width: 320px;
@@ -177,9 +177,9 @@ import { CommonModule } from '@angular/common';
       font-style: italic;
     }
 
-    /* Checkout Button Positioning */
+    
     .checkout-wrapper {
-      margin-top: 10px; /* 10px gap as requested */
+      margin-top: 10px; 
       display: flex;
       justify-content: center;
       cursor: pointer;
@@ -251,7 +251,7 @@ import { CommonModule } from '@angular/common';
       letter-spacing: -0.01em;
     }
 
-    /* Animated Card Icon */
+    
     .card-icon {
       width: 50px;
       height: 34px;

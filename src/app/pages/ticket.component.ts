@@ -136,7 +136,6 @@ export class TicketComponent implements OnInit {
   ngOnInit() {
     this.tickets = this.store.getTickets();
     const id = this.route.snapshot.paramMap.get('ticketId');
-    // If it's a new ticket (id !== 'last' or similar), add it if not present
     if (id && id !== 'last') {
       const exists = this.tickets.find(t => this.getTicketId(t) === id);
       if (!exists) {
@@ -189,10 +188,6 @@ export class TicketComponent implements OnInit {
     );
   }
   private saveToStore(): void {
-    // In our simplified store, we might need a method to save current array 
-    // but addTicket already saves. For updates, we can just hack it if needed
-    // or better, implement a sync method in store.
-    // For now, let's just use localstorage directly as it's an imitation
     const key = (this.store as any).getTicketsKey?.() || 'booking_tickets_guest';
     try { localStorage.setItem(key, JSON.stringify(this.tickets)); } catch (e) { }
   }
